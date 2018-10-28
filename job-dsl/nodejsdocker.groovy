@@ -5,7 +5,7 @@ job('NodeJS Docker example') {
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
     }
-    triggers {arend
+    triggers {
         scm('H/5 * * * *')
     }
     wrappers {
