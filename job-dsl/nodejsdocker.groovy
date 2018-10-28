@@ -5,7 +5,7 @@ job('NodeJS Docker example') {
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
     }
-    triggers {
+    triggers {arend
         scm('H/5 * * * *')
     }
     wrappers {
@@ -14,7 +14,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('wardviaene/docker-nodejs-demo')
+            repositoryName('ajoosterveld/docker-nodejs-demo')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
