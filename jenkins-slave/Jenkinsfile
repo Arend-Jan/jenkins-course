@@ -12,6 +12,7 @@ node {
          * docker build on the command line */
         
         sh 'cd jenkins-slave'
+        sh 'cd jenkins-slave'
         sh 'pwd'
         sh 'ls'
         app = docker.build("jenkins-slave")
