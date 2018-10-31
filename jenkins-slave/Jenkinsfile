@@ -10,12 +10,11 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        
-        sh 'cd jenkins-slave'
-        sh 'cd jenkins-slave'
-        sh 'pwd'
-        sh 'ls'
-        app = docker.build("jenkins-slave")
+        script {
+            dir('jenkins-slave/') {
+                app = docker.build("jenkins-slave")
+            }
+        }
     }
 
     stage('Test image') {
