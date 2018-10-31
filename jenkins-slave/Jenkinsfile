@@ -12,7 +12,7 @@ node {
          * docker build on the command line */
         script {
             dir('jenkins-slave/') {
-                app = docker.build("jenkins-slave")
+                app = docker.build("ajoosterveld/jenkins-slave")
             }
         }
     }
